@@ -23,18 +23,17 @@ public class MergeSort {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int num = Integer.parseInt(in.nextLine());
-        int[] arr = new int[num];
-        String[] strArr = in.nextLine().split(" ");
-        for (int i = 0; i < num; i++){
-            arr[i] = Integer.parseInt(strArr[i]);
-        }
-
-        mergeSort(arr, 0, num - 1);
-
-        for (int i = 0; i < num; i++) {
-            System.out.print(arr[i] + " ");
+        int n = in.nextInt();
+        int[] q = new int[n];
+        for (int i = 0; i < n; i++) {
+            q[i] = in.nextInt();
         }
         in.close();
+
+        mergeSort(q, 0, n - 1);
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(q[i] + " ");
+        }
     }
 }
