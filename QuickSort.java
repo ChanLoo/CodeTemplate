@@ -1,6 +1,28 @@
 import java.util.Scanner;
 
 public class QuickSort {
+    /*
+    input:
+    5
+    3 1 2 4 5
+    */
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int num = Integer.parseInt(in.nextLine());
+        int[] arr = new int[num];
+        String[] strArr = in.nextLine().split(" ");
+        for (int i = 0; i < num; i++){
+            arr[i] = Integer.parseInt(strArr[i]);
+        }
+
+        quickSort(arr, 0, num - 1);
+
+        for (int i = 0; i < num; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        in.close();
+    }
+
     public static void quickSort(int[] q, int l, int r) {
         if (l >= r) return;
 
@@ -17,22 +39,5 @@ public class QuickSort {
         }
         quickSort(q, l, j);
         quickSort(q, j + 1, r);
-    }
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int num = Integer.parseInt(in.nextLine());
-        int[] arr = new int[num];
-        String[] strArr = in.nextLine().split(" ");
-        for (int i = 0; i < num; i++){
-            arr[i] = Integer.parseInt(strArr[i]);
-        }
-
-        quickSort(arr, 0, num - 1);
-
-        for (int i = 0; i < num; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        in.close();
     }
 }

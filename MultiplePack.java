@@ -53,6 +53,7 @@ public class MultiplePack {
                 w[cnt] = b * s;
             }
         }
+        in.close();
 
         n = cnt;
         for (int i = 1; i <= n; i++) {

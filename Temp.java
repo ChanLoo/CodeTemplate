@@ -11,6 +11,7 @@ public class Temp {
             int x = in.nextInt();
             System.out.print(BinarySearch1(0, n - 1) + " " + BinarySearch2(0, n - 1));
         }
+        in.close();
 
         return;
     }

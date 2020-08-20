@@ -18,6 +18,7 @@ public class GroupPack {
                 w[i][j] = in.nextInt();
             }
         }
+        in.close();
 
         for (int i = 1; i <= n; i++) {
             for (int j = m; j >= 0; j--) {
